@@ -1,0 +1,162 @@
+#btnSubmit {
+    position: absolute;
+    background: url(submit.png);
+    background-size: 100% 100%;
+    display: none;
+    cursor: pointer;
+    width: 150px;
+    height: 32px;
+    top: 401px;
+    left: 750px;
+    z-index: 2;
+    display:none;
+}
+
+.activity-container {
+	margin-top: 5em;
+}
+
+#divider-h-1 {
+	border-top: 1px solid #fff;
+    position: absolute;
+    top: 142px;
+    left: -9px;
+    height: 1px;
+    width: 187px;
+    z-index: 20px;
+}
+
+#divider-h-2 {
+	border-top: 1px solid #fff;
+    position: absolute;
+    top: 217px;
+    left: -9px;
+    height: 1px;
+    width: 187px;
+    z-index: 20px;
+}
+
+.divider-h {
+	border-top: 1px solid #fff;
+}
+
+.divider-v {
+	border-left: 2px solid #ccc;
+	padding: 0 0 0 23px;
+}
+
+.termContainer {
+   position: absolute; 
+   background-color: #dae7ec;
+   border: 2px solid #519dc1;
+   border-left: none;
+   height: 230px;
+   width: 188px;
+   left: -9px;
+}
+
+.termDefinition {
+	font-size: 15px;
+    height: 99px;
+    line-height: 21px;
+}
+
+.termTag {
+    background-color: #8e191b;
+	-webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    height: 45px;
+    margin: 16px;
+    text-align: center;
+    width: 155px;
+    z-index: 2;
+}
+
+#draggable1{
+    position:absolute !important;
+    top:65px;
+    left: -11px;
+}
+#draggable2{
+    position:absolute !important;
+    top:140px;
+    left: -11px;
+}
+#draggable3{
+    position:absolute !important;
+    top:215px;
+    left: -11px;
+}
+
+.termTag p{
+	font-size: 14px;
+  padding: 14px;
+}
+
+.termTag .txt-row2{
+   padding: 7px;
+}
+
+.termDropZone {
+	background-color: #fff;
+	border: 1px dashed #404041 !important;
+	border-radius: 5px;
+	height: 40px;
+	width: 150px;
+}
+
+#drop1Check{
+    position:absolute;
+    background:url(tick.png);
+    background-repeat: no-repeat;
+    top: 202px;
+    left: 744px;
+    width:50px;
+    height:50px;
+    display:none;
+}
+
+#drop2Check{
+    position:absolute;
+    background:url(tick.png);
+    background-repeat: no-repeat;
+    top:202px;
+    left:500px;
+    width:50px;
+    height:50px;
+    display:none;
+}
+
+#drop3Check{
+    position:absolute;
+    background:url(tick.png);
+    background-repeat: no-repeat;
+    top: 202px;
+    left: 279px;
+    width:50px;
+    height:50px;
+    display:none;
+}
+
+
+.activity-col {
+	float: left;
+	margin: 0 15px 0 0;
+	width: 200px;
+}
+
+.activity-col .showhint {
+	   margin-left: 0;
+    margin-top: 0;
+    position: absolute;
+    display: none;
+}
+
+
+.col-width-sm {
+	width: 180px;
+}

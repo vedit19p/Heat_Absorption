@@ -1,0 +1,984 @@
+/* Simulation Page *********************************************************/
+
+#simulationPage {
+    position: absolute;
+    width: 1000px;
+    height: 625px;
+    display: none;
+}
+
+#dragContainment {
+    position: absolute;
+    top: 32px;
+    left: 2px;
+    right: 2px;
+    height: 500px;
+    background: none;
+    display: none;
+}
+
+
+/* Icon Bar ****************************************************************/
+
+#iconBar {
+    position: absolute;
+    top: 46px;
+    left: 0px;
+    width: 1000px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1002;
+    display: none;
+}
+
+#icons {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    z-index: 1;
+    display: inline;
+}
+
+ul.icon-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.icon-bar li {
+    float: left;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+ul.icon-bar li.optional-icons {
+    position: absolute;
+    right: 193px;
+    float: right;
+    padding-left: 250px;
+    padding-right: 0;
+    white-space: nowrap;
+}
+
+.optional-icon {
+    margin-left: 9px;
+    margin-right: 9px;
+    white-space: normal;
+    display: inline-block;
+}
+
+#partsDepartmentIcon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../images/icons/parts_dep_active.png) 0% 0% / 100% 100%;
+    background-size: 18px 18px;
+}
+
+#toolTrayIcon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../images/icons/tools_icon.png) 0% 0% / 100% 100%;
+    background-size: 18px 18px;
+}
+
+#serviceInfoIcon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../images/icons/graphic.png) 0% 0% / 100% 100%;
+    background-size: 18px 18px;
+}
+
+#zoomInIcon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../images/icons/zoom_in.png) 0% 0% / 100% 100%;
+    background-size: 18px 18px;
+}
+
+#zoomOutIcon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../images/icons/zoomout_inactive.png) 0% 0% / 100% 100%;
+    background-size: 18px 18px;
+}
+
+#muteIcon {
+    position: absolute;
+    right: 153px;
+    width: 27px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../images/icons/mute.png) 0% 0% / 100% 100%;
+    background-size: 27px 18px;
+}
+
+#muteIcon.active {
+    position: absolute;
+    right: 153px;
+    width: 22px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../images/icons/mute_active.png) 0% 0% / 100% 100%;
+    background-size: 22px 18px;
+}
+
+#audioRepeatIcon {
+    position: absolute;
+    right: 112px;
+    width: 21px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../images/icons/repeat.png) 0% 0% / 100% 100%;
+    background-size: 21px 18px;
+}
+
+#ccIcon {
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    right: 69px;
+    cursor: pointer;
+    background: url(../images/icons/cc_active.png) 0% 0% / 100% 100%;
+    background-size: 20px 18px;
+}
+
+#ccIcon.active {
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    right: 69px;
+    cursor: pointer;
+    background: url(../images/icons/cc.png) 0% 0% / 100% 100%;
+    background-size: 20px 18px;
+}
+
+#menuIcon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: 30px;
+    cursor: pointer;
+    background: url(../images/icons/menuicon.png) 0% 0% / 100% 100%;
+    background-size: 18px 18px;
+}
+
+#closeIcon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -5px;
+    top: -3px;
+    cursor: pointer;
+    background: url(../images/icons/close_task.png) no-repeat;
+    background-origin: top center;
+}
+
+
+/* DropDown Menu ************************************************************/
+
+ul#menu {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    width: 195px;
+    height: auto;
+    background: #fff;
+    display: none;
+    list-style: none;
+}
+
+ul#menu .litext,
+.litext1 {
+    font-family: "Roboto-Medium";
+    font-size: 14px;
+}
+
+ul#menu li {
+    margin-left: 0px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+ul#menu li:hover {
+    background-color: #E0E0E0;
+}
+
+ul#menu li#version {
+    font-family: "Roboto-Light";
+    font-size: 14px;
+    padding-left: 12px;
+}
+
+ul#menu li ul.submenuVideos {
+    position: absolute;
+    right: 170px;
+    top: 34px;
+    width: 245px;
+    height: auto;
+    background: #fff;
+    display: none;
+    list-style: none;
+}
+
+ul#menu li ul.submenuVideos li {
+    margin-left: 0px;
+    text-indent: -11px;
+    padding-left: 30px;
+    padding-top: 9px;
+}
+
+ul#menu li ul.submenuVideos li span.darrow {
+    height: 8px;
+    width: 16px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 6px;
+    background: url(../images/icons/darrow.png);
+    z-index: 10;
+}
+
+ul#menu li span.rarrow {
+    height: 16px;
+    width: 8px;
+    float: left;
+    margin-left: 12px;
+    margin-right: 10px;
+    background: url(../images/icons/rarrow.png);
+}
+
+ul#menu li span.noarrow {
+    height: 16px;
+    width: 8px;
+    float: left;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+ul#menu li ul.submenuActivites {
+    position: absolute;
+    right: 170px;
+    top: 68px;
+    width: 275px;
+    height: auto;
+    background: #fff;
+    display: none;
+    list-style: none;
+}
+
+ul#menu li ul.submenuActivites li {
+    margin-left: 0px;
+    text-indent: -11px;
+    padding-left: 30px;
+    padding-top: 9px;
+}
+
+ul#menu li ul.submenuActivites li span.darrow {
+    height: 8px;
+    width: 16px;
+    float: right;
+    margin-right: 5px;
+    margin-top: -8px;
+    background: url(../images/icons/darrow.png);
+    z-index: 10;
+}
+
+.checkmark {
+    float: left;
+    width: 17px;
+    height: 22px;
+    display: none;
+    margin-left: -24px;
+    margin-right: 15px;
+    margin-top: -2px;
+    background: url(../images/icons/tick.png);
+}
+
+.activity-tick-container {
+    float: left;
+    margin-left: -24px;
+    margin-right: 15px;
+}
+
+.activity-tick {
+    width: 17px;
+    height: 17px;
+    margin-left: 7px;
+}
+
+
+/* Service Information Menu *************************************************/
+
+ul#siMenu {
+    position: absolute;
+    right: 130px;
+    top: 25px;
+    width: 225px;
+    height: auto;
+    background: #fff;
+    display: none;
+    list-style: none;
+}
+
+ul#siMenu .litext,
+.litext1 {
+    font-family: "Roboto-Medium";
+    font-size: 14px;
+}
+
+ul#siMenu li {
+    margin-left: 0px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+ul#siMenu li:hover {
+    background-color: #E0E0E0;
+}
+
+
+/* Simulation Container *****************************************************/
+
+#simulationContainer {
+    position: absolute;
+    width: 1000px;
+    height: 580px;
+    top: 45px !important;
+    left: 0px !important;
+    background: url(../images/series/car.jpg) no-repeat;
+    background-size: contain;
+    background-position-y: 20px;
+}
+
+#wholeContainer {
+    background: rgba(0, 0, 0, 0) url("../images/series/BG_teal.png");
+    height: 502px;
+    left: 21px;
+    position: absolute;
+    top: 30px;
+    width: 972px;
+    z-index: 2;
+}
+
+#contentContainer {
+    background: rgba(0, 0, 0, 0) url("../images/series/bg.png") repeat scroll 0 0;
+    font-family: Roboto-Regular;
+    font-size: 12px;
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    width: 944px;
+    height: 474px;
+    padding: 0;
+    margin: 0;
+}
+
+#contentInnerContainer {
+    position: absolute;
+    left: 8px;
+    right: 20px;
+    top: 10px;
+    bottom: 18px;
+    padding: 0;
+}
+
+#zoomWrapper {
+    position: absolute;
+    left: 9px;
+    top: 8px;
+    right: 15px;
+    bottom: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+#panWrapper {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding: 0px;
+}
+
+
+/* Floating Window *******************************************************/
+
+#floatWindow {
+    position: absolute;
+    font-family: Roboto-Bold;
+    width: 230px;
+    background: #FDF7B6;
+    border: 2px solid #fff;
+    top: 96px;
+    left: 750px;
+    float: right;
+    z-index: 1500;
+    display: none;
+    -webkit-box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.75);
+}
+
+#floatWindow.tabletSize {
+	left: 500px !important;
+}
+
+#floatWindow.tabletSize #closeFloatWindow {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+#floatWindow>#floatHeader {
+    background: url(../images/series/activity_bar.jpg) no-repeat transparent;
+    width: 230px;
+    height: 80px;
+    cursor: move;
+}
+
+#floatWindow>#floatHeader>.activityTitle {
+    position: absolute;
+    font-family: Roboto-Bold;
+    font-size: 17px;
+    color: #FDF7B6;
+    width: 90%;
+    top: 29px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+#floatContent {
+    width: 199px;
+    height: 250px;
+    padding: 20px;
+    cursor: move;
+    line-height: 16px;
+}
+
+span.taskListDescription {
+    font-family: Roboto-Light;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+ol.taskList li.taskListItem {
+    font-family: Roboto-Light;
+    font-size: 14px;
+    margin-left: 20px;
+    padding: 5px;
+    list-style-type: decimal;
+}
+
+#closeFloatWindow {
+    width: 30px;
+    height: 30px;
+    float: right;
+    cursor: pointer;
+}
+
+
+/* Service Information Window *******************************************************/
+
+#serviceInformationWindow {
+    position: absolute;
+    font-family: Roboto-Bold;
+    width: 230px;
+    background: #fff;
+    border: 2px solid #fff;
+    top: 96px;
+    left: 200px;
+    float: left;
+    width: 630px;
+    z-index: 100;
+    cursor: default;
+    display: none;
+    -webkit-box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.75);
+}
+
+#serviceInformationWindow>#serviceInformationHeader {
+    background: grey;
+    width: 634px;
+    height: 30px;
+    cursor: move;
+}
+
+#serviceInformationWindow>#serviceInformationHeader>#serviceInformationClose {
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    cursor: pointer;
+}
+
+#serviceInformationWindow>#serviceInformationHeader>#serviceInformationMinMax {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 5px;
+    top: 4px;
+    cursor: pointer;
+}
+
+#serviceInformationWindow>#serviceInformationHeader>#serviceInformationDownload {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 35px;
+    top: 4px;
+    cursor: pointer;
+}
+
+#serviceInformationWindow>#serviceInformationHeader>#serviceInformationZoomOut {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 65px;
+    top: 4px;
+    cursor: pointer;
+}
+
+#serviceInformationWindow>#serviceInformationHeader>#serviceInformationZoomIn {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 95px;
+    top: 4px;
+    cursor: pointer;
+}
+
+#serviceInformationWindow>#serviceInformationContent {
+    width: 630px;
+    height: 370px;
+    padding: 0px;
+    line-height: 16px;
+}
+
+#serviceInformationWindow>#serviceInformationContent>#serviceInformationInnerContent {
+    width: 620px;
+    height: 370px;
+    position: relative;
+    text-align: center;
+}
+
+#serviceInformationWindow>#serviceInformationContent>#serviceInformationInnerContent>img {
+    width: auto;
+    height: 94%;
+    position: relative;
+}
+
+
+/* Alert Box ****************************************************************/
+
+#alertBox {
+    font-family: Roboto-Medium;
+    font-size: 15px;
+    position: relative;
+    width: 440px;
+    height: auto;
+    padding: 20px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
+    text-align: left;
+    margin-top: 183px;
+    margin-left: 280px;
+    margin-right: 280px;
+    z-index: 1005;
+    display: none;
+    -webkit-box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 16px -3px rgba(0, 0, 0, 0.75);
+}
+
+#alertBox>#alertContent>#activityNames {
+    line-height: 20px;
+}
+
+#alertBox>#alertContent>.alert-text {
+    font-family: Roboto-Medium;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+#alertBox>#buttonBar {
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#alertBox>#buttonBar>#btnYes {
+    position: relative;
+    bottom: 10px;
+    left: 60px;
+    float: left;
+    padding: 10px;
+}
+
+#alertBox>#buttonBar>#btnNo {
+    position: relative;
+    bottom: 10px;
+    right: 60px;
+    float: right;
+    padding: 10px;
+}
+
+#alertBox>#buttonBar>div>img.alertbox-button {
+    height: 36px;
+    width: 160px;
+    cursor: pointer;
+}
+
+
+/* Continue Button **********************************************************/
+
+#btnContinue,
+#btnNarrativeContinue {
+    position: relative;
+    margin: 500px 793px;
+    right: -4px;
+    background: url(../images/buttons/horizontal/continue.png);
+    background-size: 100% 100%;
+    display: none;
+    cursor: pointer;
+    width: 150px;
+    height: 32px;
+    z-index: 2;
+}
+
+#btnContinue:active,
+#btnNarrativeContinue:active {
+    background: url(../images/buttons/horizontal/continue_over.png);
+    background-size: 100% 100%;
+}
+
+.btn-continue {
+    background: url(../images/buttons/horizontal/continue.png);
+    background-color: transparent;
+    background-size: 100% 100%;
+    width: 150px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+}
+
+#btncon {
+    background: rgba(0, 0, 0, 0) url("../images/buttons/horizontal/continue.png") repeat scroll 0 0 / 100% 100%;
+    cursor: pointer;
+    display: block;
+    height: 43px;
+    margin: 20px auto;
+    position: relative;
+    width: 200px;
+    top: 230px;
+}
+
+#btncon:active {
+    background: rgba(0, 0, 0, 0) url("../images/buttons/horizontal/continue_over.png") repeat scroll 0 0 / 100% 100%;
+}
+
+#btnReviewQuestions {
+    display: none;
+    background: rgba(0, 0, 0, 0) url("../images/buttons/horizontal/review_questions.png") repeat scroll 0 0 / 100% 100%;
+    cursor: pointer;
+    height: 43px;
+    margin: 20px auto;
+    position: relative;
+    width: 200px;
+    top: 230px;
+}
+
+#btnReviewQuestions:active {
+    background: rgba(0, 0, 0, 0) url("../images/buttons/horizontal/review_questions_over.png") repeat scroll 0 0 / 100% 100%;
+}
+
+
+/* Skip Button **********************************************************/
+
+#skipBtn {
+    background: rgba(0, 0, 0, 0) url("../images/buttons/horizontal/skip_intro.png") no-repeat scroll 0 0 / 100% auto;
+    border-radius: 5px;
+    bottom: 0;
+    cursor: pointer;
+    font-family: HelveticaLTStd-Bold;
+    height: 94px;
+    left: 0;
+    line-height: 30px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 70px;
+    width: 250px;
+    z-index: 10;
+}
+
+#skipBtn:active {
+    background: rgba(0, 0, 0, 0) url("../images/buttons/horizontal/skip_intro_over.png") no-repeat scroll 0 0 / 100% auto;
+}
+
+
+/* Activity Message Overlay *************************************************/
+
+#activityMessageOverlay {
+    position: absolute;
+    width: 1000px;
+    height: 580px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 45px !important;
+    left: 0px !important;
+    display: none;
+    z-index: 1003;
+}
+
+#activityMessageOverlay>#activityMessage {
+    position: relative;
+    margin-top: 25%;
+    width: 1000px;
+    height: 100px;
+    background-color: #fff;
+}
+
+#activityMessageOverlay>.btn-continue {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 40%;
+    margin-right: 50%;
+    width: 200px;
+    height: 43px;
+}
+
+
+/* Popup Video Player *******************************************************/
+
+#popupVideoPlayer {
+    position: absolute;
+    width: 1000px;
+    height: 580px;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1004;
+    top: 140px;
+}
+
+#popupVideoPlayer>#videoClose {
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    right: 85px;
+    top: -25px;
+    padding: 2px;
+    border: 1px solid #fff;
+}
+
+#popupVideoPlayer>#videoPlayer {
+    position: absolute;
+    width: 760px;
+    height: 404px;
+    top: -25px;
+    left: 120px;
+    border: 2px solid #fff;
+    background: #000;
+    display: block;
+}
+
+#popupVideoPlayer>#videoPlayer>#videoFrame {
+    width: 760px;
+    height: 404px;
+}
+
+
+/* Automotive Shop *********************************************************/
+
+#automotiveShop {
+    position: absolute;
+    top: 46px;
+    width: 1000px;
+    height: 620px !important;
+    /*580*/
+    background: url(../images/series/bg.jpg) no-repeat;
+    background-size: 103%;
+    z-index: 1;
+    display: none;
+}
+
+#customerCar {
+    position: absolute;
+    height: 450px;
+    width: auto;
+    top: 95px;
+    left: -15px;
+}
+
+
+/* Parts Department *********************************************************/
+
+#partsDepartment {
+    position: absolute;
+    top: 76px;
+    width: 1000px;
+    height: 580px;
+    background: url(../images/series/parts_department_BCMs.jpg) no-repeat;
+    background-size: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+
+/* Tool Tray ***************************************************************/
+
+#toolTray {
+    width: 186px;
+    height: 460px;
+    background-image: url("../images/tool_tray.png");
+    position: absolute;
+    right: -196px;
+    top: 80px;
+    z-index: 1000000;
+}
+
+#toolTray>#toolTrayHeader {
+    position: relative;
+    height: 40px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: 0;
+}
+
+#toolTray>#toolTrayHeader>#scrollUp {
+    background-image: url("../images/tool_tray_arrow_up.png");
+    width: 55px;
+    height: 36px;
+    margin-left: 65px;
+    cursor: pointer;
+}
+
+#toolTray>#toolTrayHeader>#closeTray {
+    background-image: url("../images/icons/close_popup.png");
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    margin-top: -25px;
+    margin-right: 15px;
+    float: right;
+    cursor: pointer;
+}
+
+#toolTray>#toolTrayContent {
+    position: relative;
+    height: 373px;
+    margin-left: 3px;
+    margin-right: 0;
+    overflow-x: hidden;
+}
+
+#toolTray>#toolTrayContent::-webkit-scrollbar {
+    width: 0 !important
+}
+
+#toolTray>#toolTrayContent>#contentInner {
+    height: auto;
+    width: 100%;
+    padding: 5px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#toolTray>#toolTrayContent>#contentInner>.tools {
+    width: 130px;
+    height: 130px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#toolTray>#toolTrayFooter {
+    z-index: 1000001;
+    height: 40px;
+    left: 3px;
+    right: 0;
+    position: absolute;
+    bottom: 3px;
+}
+
+#toolTray>#toolTrayFooter>#scrollDown {
+    background-image: url("../images/tool_tray_arrow_down.png");
+    width: 55px;
+    height: 36px;
+    margin-left: 65px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+/* Footer ******************************************************************/
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 1000px;
+    height: 50px;
+    border: none;
+    display: none;
+    z-index: 999;
+}
+
+#ccContent {
+    font-family: Roboto-Medium;
+    font-size: 14px;
+    position: absolute;
+    width: 831px;
+    height: 50px;
+    color: #010101;
+    float: left;
+    background: #ccc;
+    display: none;
+}
+
+#cctxt {
+    position: absolute;
+    width: 790px;
+    left: 20px;
+    top: 7px;
+    line-height: 19px;
+}
+
+#scoreArea {
+    font-family: RobotoSlab-Regular;
+    font-size: 16px;
+    color: #FDEE1C;
+    width: 170px;
+    height: 50px;
+    float: right;
+    background: rgba(0, 0, 0, 0.9);
+    line-height: 50px;
+}
+
+#scoreArea>div {
+    position: relative;
+    left: 20px;
+}
+
+#scoreval {
+    color: #fff;
+}

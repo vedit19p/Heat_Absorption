@@ -1,0 +1,200 @@
+/* Home Page *********************************************************/
+#homePage {
+	position: absolute;
+	width: 1000px;
+	height: 625px;
+	margin:0;
+	padding:0;
+	display: block;
+}
+
+#homeLogo {
+	position: absolute;
+	top: 10px;
+	right: 40px;
+	width: 100px;
+	height: 45px;
+	background: url(../images/series/logo.png);
+	display: block;
+}
+
+#homeContainer {
+	position: absolute;
+	width: 1000px;
+	height: 519px;
+	top: 106px;
+	border: none;
+}
+
+#mainHeading {
+	font-family: RobotoSlab-Bold;
+	position: absolute;
+	top: -9px;
+    left: 254px;
+	width: 1000px;
+	height: auto;
+	font-size : 89px;
+	color: #fff;
+	text-indent: -67px;
+}
+
+#mainHeading > p {	
+	margin-top: 0px; 
+}
+
+#subHeading {
+	font-family: Roboto-Medium;
+	position: absolute;
+	top: 163px;
+    left: 260px;
+    font-size: 43px;
+	color: #FDEE1C;
+	text-transform: uppercase;
+}
+
+
+/** BUTTONS ************************************/
+#homeButtons {
+	position: absolute;
+	top: 292px;
+	left: 240px;
+	width: 500px;
+	height: 160px;
+	color: #fff;
+	line-height: 18px;
+}
+
+/* Using the Simulation */
+#btnUseSimulation {
+	font-family: Roboto-Regular;
+	font-size: 16px;
+	width: 150px;
+	height: 150px;	
+	background: none;
+	text-align: center;
+	position: absolute;
+}
+.btnUseSimulationImage {
+	position: absolute;
+	width: 109px;
+	height: 109px;
+	left: 22px;
+	cursor: pointer;
+	background: url(../images/buttons/hand_icon.png) no-repeat transparent;
+	background-size:100%;
+}
+.btnUseSimulationImage:active {
+	background: url(../images/buttons/hand_icon_hover.png) no-repeat;
+	background-size: 100%;
+}
+.btnUseSimulationText {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+}
+#btnUseSimulationText:active {
+	color: #FFEF00;
+}
+
+/* Understanding the Concepts */
+#btnUnderstandConcepts {
+	font-family: Roboto-Regular;
+	font-size: 16px;	
+	width: 150px;
+	height: 150px;
+	background: none;
+	text-align: center;
+	position: absolute;
+	left: 187px;
+}
+.btnUnderstandConceptsImage {
+	position:absolute;
+	width: 109px;
+	height: 109px;
+	left:22px;
+	cursor: pointer;
+	background: url(../images/buttons/light_icon.png) no-repeat transparent;
+	background-size:100%;	
+}
+.btnUnderstandConceptsImage:active {
+	background: url(../images/buttons/light_icon_hover.png);
+	background-size:100%;
+}
+.btnUnderstandConceptsText {
+	position:absolute;
+	width: 100%;
+	bottom: 0px;
+}
+#btnUnderstandConceptsText:active {
+	color: #FFEF00;
+}
+
+/* Understanding the Equipment */
+#btnUnderstandEquipment {
+	font-family: Roboto-Regular;
+	font-size: 16px;	
+	width: 150px;
+	height: 150px;
+	background: none;
+	text-align: center;
+	position: absolute;
+	left: 187px;
+}
+.btnUnderstandEquipmentImage {
+	position:absolute;
+	width: 109px;
+	height: 109px;
+	left:22px;
+	cursor: pointer;
+	background: url(../images/buttons/light_icon.png) no-repeat transparent;
+	background-size:100%;	
+}
+.btnUnderstandEquipmentImage:active {
+	background: url(../images/buttons/light_icon_hover.png);
+	background-size:100%;
+}
+.btnUnderstandEquipmentText {
+	position:absolute;
+	width: 100%;
+	bottom: 0px;
+}
+#btnUnderstandEquipmentText:active {
+	color: #FFEF00;
+}
+
+/* Enter Simulation */
+#btnSimulation {
+	font-family: Roboto-Regular;
+	font-size: 16px;	
+	width: 150px;
+	height: 150px;
+	background: none;
+	text-align: center;
+	position: absolute;
+	left: 372px;
+}
+.btnSimulationImage {
+	position:absolute;
+	width: 109px;
+	height: 109px;
+	left:22px;
+	cursor: pointer;
+	background: url(../images/buttons/car_icon.png) no-repeat transparent;
+	background-size: 100%;
+}
+.btnSimulationImage:active {
+	background: url(../images/buttons/car_icon_hover.png) no-repeat;
+	background-size: 100%;
+}
+.btnSimulationText {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+}
+#btnSimulationText:active {
+	color: #FFEF00;
+}
+
+
+
+

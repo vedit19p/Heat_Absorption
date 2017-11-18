@@ -1,0 +1,71 @@
+<?php
+
+header('X-Frame-Options: ALLOWALL');
+
+?>
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<head>
+		<title>Video</title> 
+
+
+        <link href="../js/vendor/plug-ins/video-js/video-js.css" rel="stylesheet" type="text/css">
+        <link href="../js/vendor/plug-ins/video-js/lib/videojs-captions-toggle.css" rel="stylesheet" type="text/css"> 
+		<script type="text/javascript" src="../js/vendor/plug-ins/video-js/video.js"></script>
+        <script type="text/javascript" src="../js/vendor/plug-ins/video-js/lib/videojs-captions-toggle.js"></script>        
+ 		<style>
+			body {
+				margin:0;
+				padding:0;
+			}
+		</style>
+		<script>
+			//alert('relay_vide');
+		</script>
+	</head>    
+	<body>
+		<div id="container">
+			<video id="videoPlayer" class="video-js vjs-default-skin"  controls preload="none" width="760" height="404" poster="../images/common/uequipment.png" data-setup="{}">           		
+				<source id="mp4Vid" src="relay_360.mp4" type="video/mp4">
+				<source id="webmVid" src="relay_360.webm" type="video/webm">
+				<source id="ogvVid" src="relay_360.ogv" type="video/ogg">
+				<track id="capVid" kind="captions" src="relay_360.captions.vtt" srclang="en" label="English"></track>
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+            </video> 
+		</div>
+
+		
+		<!--<script type="text/javascript" src="video.js"></script>-->
+	</body>
+</html>
+
+<script type="text/javascript">
+	var devStatus=getMobileOperatingSystem();
+	if (devStatus!="iOS" && devStatus!="Android"){
+		videojs('videoPlayer').captionsToggle();
+	}
+	var slik = /silk/.test(navigator.userAgent.toLowerCase());
+	if(!slik&&devStatus=="Android"){ 
+		if(/chrome/.test(navigator.userAgent.toLowerCase()) || /firefox/.test(navigator.userAgent.toLowerCase())){
+			videojs('videoPlayer').captionsToggle();			
+		}
+	}
+	
+	/* load webm for chrome */
+	if (window.chrome) {
+		videojs('videoPlayer').src({ type: "video/webm", src: 'relay_360.webm' });
+	}else{
+		videojs('videoPlayer').src({ type: "video/mp4", src: 'relay_360.mp4' });
+	}
+	
+	function getMobileOperatingSystem() {
+	  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+	  if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
+	  {	return 'iOS'; }
+	  else if( userAgent.match( /Android/i ) )
+	  {	return 'Android';  }
+	  else
+	  {	return 'unknown';  }
+	}	
+</script>

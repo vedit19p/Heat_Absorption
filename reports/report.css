@@ -1,0 +1,924 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-user-modify: none;
+    -webkit-highlight: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+.acttxt{
+    font-family:RobotoSlab-bold;
+    text-decoration:none;
+    line-height:30px;
+    font-size: 14px;
+    margin-top:25px;
+    height:40px;
+
+}
+
+.acttxt1{
+    font-family: Roboto-Light;
+    font-size: 14px;
+    margin-bottom:20px;
+}
+#mainContainer {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 1000px;
+    height: 580px;
+    transform-origin: 0px 0px;
+    background: url(../assets/images/activity/act_1/car.jpg);
+    background-size: 100% 100%;
+    font-family: RobotoCondensed-Regular;
+    display: none;
+}
+#pdfContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 595px;
+    height: 445px;
+    overflow-y: auto;
+    border: 1px solid red;
+    display: none;
+}
+
+#congratulationsView,#processReport{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 908px;
+    height: 434px;
+    background: #fff;
+    border-top: 1px solid #000;
+    display: none;
+}
+#congratulationsView{
+    width:850px;
+    height:460px;
+    text-align:center;
+    margin-top: 65px;
+    z-index: 1000;
+}
+#congbox {
+    margin-top: 45px;
+}
+#congrats{
+    font-family: RobotoSlab-Bold;
+    font-size: 52px;
+    color:#8E0006;
+}
+.failmsg, .timemsg{
+    font-family: Roboto-Medium;
+    font-size: 24px;
+    color:#D20013;
+    line-height: 30px;
+}
+.failmsg{
+    margin-top: 20px;
+}
+.timemsg{
+    margin-top: 18px;
+}
+.scoremsg{
+    font-family: Roboto-Medium;
+    font-size: 48px;
+    color:#000000;
+    margin-top: 20px;
+}
+
+#closeBtn,#downloadBtn{
+    margin: auto;
+    margin-top: 60px;
+    margin-left: 33px;
+    width:200px;
+    height:43px;
+    background: url(../assets/images/buttons/horizontal/close_window.png) no-repeat;
+    background-size:100%;
+    cursor:pointer;
+    display: inline-block;
+}
+#downloadBtn{
+    background: url(../assets/images/buttons/horizontal/progress_report.png) no-repeat;
+    background-size:100%;
+}
+
+#closeBtn:active{
+    background: url(../assets/images/buttons/horizontal/close_window_over.png) no-repeat;
+    background-size:100%;
+}
+#downloadBtn:active{
+    background: url(../assets/images/buttons/horizontal/progress_report_over.png) no-repeat;
+    background-size:100%;
+}
+#logo {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 128px;
+    height: 38px;
+    /*background: gray url(../assets/images/series/logo.png); THIS AFFECTS THE MAIN LOGO ON HOME PAGE, IF NEEDED THEN NAMESPACE IT */
+    background-size: 100% 100%;
+}
+
+#processHeading {
+    color: #d22027;
+    float: left;
+    font-family: RobotoSlab-Bold;
+    font-size: 19px;
+    left: 40px;
+    line-height: 44px;
+    position: absolute;
+}
+#processSubhead {
+    color: #272626;
+    float: left;
+    font-family: Roboto-Medium;
+    font-size: 19px;
+    left: 40px;
+    line-height: 89px;
+    position: absolute;
+}
+#processLogo {
+    background: rgba(0, 0, 0, 0) url("../images/hlogo.png") repeat scroll 0 0;
+    display: block;
+    height: 45px;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    width: 100px;
+}
+#processMainhead {
+    position: absolute;
+    top: 60px;
+
+}
+.processTexthead {
+    color: #8c181f;
+    font-family: RobotoSlab-Bold;
+    font-size: 24px;
+    padding: 6px;
+    text-align: center;
+}
+#processSuppage {
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+    float: left;
+    padding: 8px;
+    width: 891px;
+    text-align: center;
+    margin-bottom:15px;
+}
+#processResultPage {
+    margin-left: 166px;
+}
+.textContainer {
+    padding: 5px;
+    width: 500px;
+    font-family: RobotoSlab-Regular;
+    font-size: 15px;
+    float:left;
+}
+
+.scoreHead {
+    color: #272626;
+    font-family: Roboto-Medium;
+    font-size: 14px;
+    line-height: 20px;
+}
+.scoreText, .timeText {
+    font-family: Roboto-Medium;
+    font-size: 15px;
+    margin-left:5px;
+}
+#scrollPara{
+    height: 140px;
+    width: 560px;
+    float: left;
+    margin-top:10px;
+}
+#paraPage {
+    font-family: Roboto-Light;
+    font-size: 14px;
+    float:left;
+    width: 429px;
+    margin-left: 8px;
+}
+#attempPage {
+    float: left;
+
+}
+#crossimgPage {
+    float:left;
+    border:none;
+
+}
+#textMainhead {
+    font-family: Roboto-Medium;
+    font-size: 14px;
+    padding-left:0px;
+}
+#textScore {
+    font-family: Roboto-Medium;
+    font-size: 14px;
+    padding: 11px;
+    float:left;
+    margin-left: 225px;
+    margin-top:10px;
+}
+.attempMainhead{
+    margin-left:263px;
+    font-family: Roboto-Medium;
+    font-size: 14px;
+}
+.yourScore {
+    float: right;
+    font-family: Roboto-Light;
+    font-size: 14px;
+    padding:2px;
+    margin-left:5px;
+}
+#printButton{
+    background: url(../assets/images/buttons/horizontal/download.png) no-repeat;
+    float: right;
+    height: 43px;
+    width: 200px;
+    left: 251px;
+    position: absolute;
+    top: 319px;
+    cursor:pointer;
+    background-size:100%;
+}
+#printButton:active{
+    background: url(../assets/images/buttons/horizontal/download_over.png) no-repeat;
+    background-size:100%;
+}
+#closeButton{
+    background: url(../assets/images/buttons/horizontal/close_window.png) no-repeat;
+    float: right;
+    height: 41px;
+    width: 200px;
+    left: 471px;
+    position: absolute;
+    top: 319px;
+    cursor:pointer;
+    background-size:100%;
+}
+#closeButton:active{
+    background: url(../assets/images/buttons/horizontal/close_window_over.png) no-repeat;
+    background-size:100%;
+}
+
+#timeelapsed1,#scoreinpercent1,#scoreincount
+{
+    font-family: Roboto-Light;
+    font-size: 14px;
+}
+
+.scoretxt{
+    font-family:RobotoSlab-bold;
+    text-decoration:none;
+    font-size: 14px;
+    width:50px;
+    float:left;
+
+}
+.scorePage{
+    float:left;
+    font-family: RobotoSlab-Regular;
+    font-size: 15px;
+}
+
+.scoreProcesscontain{
+    height: 25px;
+    width: 500px;
+}
+.textProcess{
+    margin-bottom: 15px;
+    width: 500px;
+}
+/*End Of Process Container*/
+#processReport {
+    width: 1000px;
+    height: 580px;
+}
+#table {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 900px;
+    height: 471px;
+    font-size: 15px;
+    border: 1px solid #000;
+}
+#mainTitle {
+    position: relative;
+    width: 900px;
+    height: 40px;
+    line-height: 35px;
+    text-indent: 15px;
+    border-bottom: 1px solid #000;
+    background: #a6b6be;
+}
+#subTitle {
+    position: relative;
+    width: 900px;
+    height: 35px;
+    border-bottom: 1px solid #000;
+}
+#subTitle div {
+    margin-top: 5px;
+}
+#totalAct {
+    text-align: center;
+    width: 126px;
+    float: left;
+}
+#totalScore, #totalPerScore {
+    text-align: center;
+    width: 126px;
+    margin-left: 155px;
+    display: inline-block;
+}
+#totalPerScore {
+    margin-left: 75px;
+}
+#totalTime {
+    text-align: center;
+    width: 140px;
+    float: right;
+}
+#headerCover {
+    position: relative;
+    width: 900px;
+    height: 60px;
+    border-bottom: 1px solid #000;
+    display: table;
+}
+#headerCover div {
+    position: absolute;
+    top: 0px;
+    height: 61px;
+    text-align: center;
+    display: table;
+    border-right: 1px solid #000;
+    font-weight: bold;
+}
+#headerCover div p {
+    display: table-cell;
+    vertical-align: middle;
+}
+#actNo{
+    left: 0px;
+    width: 99px;
+    display: table;
+}
+#actTitle {
+    left: 100px;
+    width: 212px;
+    display: table;
+}
+#actScore {
+    left: 380px;
+    width: 334px;
+    display: table;
+}
+#actTotScore
+{
+    left: 312px;
+    width: 67px;
+}
+.row div {
+    display: table;
+}
+.row div p {
+    display: table-cell;
+    vertical-align: middle;
+}
+#steps {
+    left: 382px;
+    width: 360px;
+}
+#attempts {
+    left: 714px;
+    width: 80px;
+}
+#points {
+    left: 795px;
+    width: 105px;
+    border-right: 0px solid #000 !important;
+}
+.activityData {
+    position: relative;
+    width: 900px;
+}
+#displayFormat .row,
+#pdfFormat .row {
+    position: relative;
+    width: 900px;
+    height: 40px;
+    background: #a6b6be;
+    border-bottom: 1px solid #000;
+}
+.actNum {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 99px;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+.actName {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 212px;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+.actScore {
+    position: absolute;
+    top: 0px;
+    left: 312px;
+    width: 67px;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+.contentArea {
+    position: relative;
+    width: 900px;
+    height: 52px;
+    border-bottom: 0px solid #000;
+}
+/*
+#contentArea9,#contentArea13,#contentArea20,#contentArea23,#contentArea28,#contentArea30 {
+	border-bottom: 1px solid #000;
+}*/
+#contentAreaError{
+    border-bottom: 1px solid #000;
+    height:42px;
+}
+#contentArea24, #contentArea24 .errorData
+{
+    height:65px;
+}
+/*#contentArea2 {
+	height: 52px;
+}
+#contentArea3 {
+	//height: 52px;
+	height: 52px !important;
+	top: -53px;
+}
+#contentArea4 {
+	//height: 52px;
+	height: 54px;
+	border-bottom: 0px;
+}
+#contentArea5 {
+	height: 52px;
+}
+#contentArea6 {
+	height: 81px;
+	border-bottom: 0px solid transparent;
+}*/
+.emptyArea {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 379px;
+    border-right: 1px solid #000;
+}
+.error {
+    position: absolute;
+    top:0px;
+    width: 520px;
+    left: 380px;
+    border-right: 1px solid #000;
+}
+.errorData {
+    border-bottom: 1px solid #000;
+    width: 520px;
+    height: 52px;
+}
+.errorData div {
+    display: table;
+}
+.errorData div p {
+    display: table-cell;
+    vertical-align: middle;
+}
+.errMsg, .stepScore {
+    width: 334px;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #000;
+    display: table;
+}
+.errMsg p {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+.errCount, .stepPoint, .stepTotalPoint, .emptyCount{
+    float: left;
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+.stepPoint, .stepTotalPoint {
+    width: 104px;
+    border-right: 0px solid #000;
+}
+.stepScore {
+    text-indent: 250px;
+}
+.scoreCover {
+    border-bottom: 0px solid #000;
+    height: 42px;
+}
+.scoreCover div {
+    display: table;
+}
+.scoreCover div  p{
+    display: table-cell;
+    vertical-align: middle;
+}
+#reviewArea {
+    position: relative;
+    width: 900px;
+    height: 40px;
+    border-top: 1px solid #000;
+    line-height: 40px;
+    text-indent: 10px;
+}
+#printButton{
+    background: url(../assets/images/buttons/horizontal/download.png) no-repeat;
+    float: right;
+    height: 43px;
+    width: 200px;
+    left: 290px;
+    position: absolute;
+    top: 510px;
+    cursor:pointer;
+    background-size:100%;
+}
+#printButton:active{
+    background: url(../assets/images/buttons/horizontal/download_over.png) no-repeat;
+    background-size:100%;
+}
+#closeButton{
+    background: url(../assets/images/buttons/horizontal/close_window.png) no-repeat;
+    float: right;
+    height: 41px;
+    width: 200px;
+    left: 520px;
+    position: absolute;
+    top: 510px;
+    cursor:pointer;
+    background-size:100%;
+}
+#closeButton:active{
+    background: url(../assets/images/buttons/horizontal/close_window_over.png) no-repeat;
+    background-size:100%;
+}
+
+#pdfViewer {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    text-align:left;
+    padding: 15px 0px 0px 15px;
+    display: none;
+    z-index: 1000;
+}
+
+#pdfViewer .container{
+    display: inline-block;
+    width: 900px;
+    text-align:left;
+}
+/* Page Header ******************************************************/
+#pdfViewer .header {
+    float:left;
+    position:relative;
+    width: 100%;
+    height:45px;
+    background: white;
+    display: block;
+    z-index: 100;
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+#pdfViewer .series {
+	font-family: sans-serif;
+    position: absolute;
+    float: left;
+    color: #D22027;
+    font-size: 24px;
+    line-height: 44px;
+    left: 0;
+}
+#pdfViewer .module-activity {
+	font-family: sans-serif;
+    line-height: 44px;
+    color: #000;
+    font-size: 20px;
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 32px;
+}
+#pdfViewer .headerLogo {
+    position: absolute;
+    float: right;
+    top:2px;
+    right: 27px;
+    width: 100px;
+    height: 45px;
+    background: url(../assets/images/series/hlogo.png);
+    display: block;
+}
+#pdfViewer .userName {
+    font-family: sans-serif;
+    line-height: 44px;
+    color: #000;
+    font-size: 22px;
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 62px;
+}
+#pdfViewer #pdfData {
+    float: left;
+    width: 100%;
+}
+#pdfData #mainTitle {
+    float:left;
+}
+#pdfData #subTitle {
+    float:left;
+    height: 45px;
+}
+
+/*** Performance Report ***/
+#pdfFormat {
+	display: none;
+}
+#pdfViewer #displayFormat {
+	display: none;
+}
+#pdfViewer #pdfFormat {
+	display: block;
+}
+#pdfFormat .row {
+	background: #fff;
+}
+#processReport {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 100%;
+    background: #fff;
+    display: none;
+}
+#processReport #pdfFormat #mainTitle {
+	width: 100%;
+	margin-bottom: 30px;
+	text-align: center;
+    font-size: 40px;
+    color: #D22027;
+    font-family: sans-serif;
+}
+#processReport #pdfFormat #subTitle {
+	width: 100%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-bottom: 30px;
+	overflow: auto;
+}
+#processReport #pdfFormat #headerCover {
+	padding-top: 30px;
+}
+#processReport #pdfFormat #totalAct,
+#processReport #pdfFormat #totalScore,
+#processReport #pdfFormat #totalPerScore,
+#processReport #pdfFormat #totalTime {
+    width: 25%;
+	padding: 20px 0;
+	text-align: center;
+    font-size: 30px;
+}
+#processReport #pdfFormat #actNo {
+	display: none;
+}
+#processReport #pdfFormat #actTitle {
+	float: left;
+    font-family: Times New Roman;
+    color: #D22027;
+    font-size: 18px;
+}
+#processReport #pdfFormat #actTotScore {
+	float: right;
+	font-family: Times New Roman;
+    color: #D22027;
+    font-size: 18px;
+}
+#pdfFormat .activityData {
+	clear: both;
+}
+#pdfFormat .activityData table {
+	width: 100%;
+}
+#pdfFormat .activityData table td {
+	font-size: 20px;
+    line-height: 30px;
+}
+#pdfFormat .activityData .actName {
+	float: left;
+	width: 500px;
+}
+#pdfFormat .activityData .actScore {
+	float: right;
+	width: 22%;
+	text-align: center;
+}
+#pdfFormat .activityData .heading {
+    font-family: Times New Roman;
+    color: #D22027;
+    font-size: 20px;
+    line-height: 30px;
+}
+#pdfFormat .activityData .taskLabel {
+    width: 80%;
+}
+#pdfFormat .activityData .taskAttempts {
+    width: 10%;
+	text-align: center;
+}
+#pdfFormat .activityData .taskScore {
+    width: 10%;
+	text-align: center;
+}
+#pdfFormat .activityData .yourScore {
+	float: right;
+	width: 100%;
+	padding: 10px 0;
+    text-align: right;
+    border-bottom: 1px solid #000;
+}
+#pdfFormat .activityData .yourScore p {
+	float: right;
+	width: 20%;
+	font-size: 20px;
+    text-align: center;
+}
+#pdfFormat #reviewArea {
+  	font-size: 20px;
+	line-height: 40px;
+    text-indent: 10px;
+    color: #D22027;
+}
+
+#pdfViewer {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px 0px 15px;
+    display: none;
+    z-index: 1000;
+}
+#pdfViewer .container{
+    display: inline-block;
+    width: 980px;
+    text-align:left;
+}
+#pdfData #mainTitle {
+	width: 100%;
+	padding: 50px 0 10px;
+	text-align: center;
+    font-size: 40px;
+    color: #D22027;
+	background: #fff;
+    font-family: sans-serif;
+}
+#pdfData #subTitle {
+	width: 100%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-bottom: 0;
+	overflow: auto;
+}
+#pdfData #headerCover {
+	padding-top: 30px;
+}
+#pdfData #totalAct,
+#pdfData #totalScore,
+#pdfData #totalPerScore,
+#pdfData #totalTime {
+    width: 25%;
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+    font-size: 30px;
+}
+#pdfData #actNo {
+	display: none;
+}
+#pdfData #actTitle {
+	float: left;
+    font-family: Times New Roman;
+    color: #D22027;
+    font-size: 18px;
+}
+#pdfData #actTotScore {
+	float: right;
+	font-family: Times New Roman;
+    color: #D22027;
+    font-size: 18px;
+}
+#pdfData .activityData {
+	width: 960px;
+    padding: 0 10px;
+}
+#pdfData .activityData .row,
+#pdfData .activityData table {
+	width: 100%;
+	border: none;
+}
+#pdfData .activityData table td {
+	font-size: 20px;
+    line-height: 30px;
+}
+#pdfData .activityData .actName {
+	left: 0;
+	text-align: left;
+	border: none;
+}
+#pdfData .activityData .actScore {
+	left: 0;
+	width: 960px;
+    text-align: right;
+	border: none;
+}
+#pdfData .activityData .heading {
+    font-family: Times New Roman;
+    color: #D22027;
+    font-size: 20px;
+    line-height: 30px;
+}
+#pdfData .activityData .taskLabel {
+    width: 80%;
+}
+#pdfData .activityData .taskAttempts {
+    width: 10%;
+	text-align: center;
+}
+#pdfData .activityData .taskScore {
+    width: 10%;
+	text-align: center;
+}
+#pdfData .activityData .yourScore {
+	float: right;
+	width: 100%;
+	padding: 10px 0;
+    text-align: right;
+    border-bottom: 1px solid #000;
+}
+#pdfData .activityData .yourScore p {
+	float: right;
+	width: 20%;
+	font-size: 20px;
+    text-align: center;
+}
+#pdfData #reviewArea {
+	border: none;
+}

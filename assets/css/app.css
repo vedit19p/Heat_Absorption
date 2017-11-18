@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #fff;
+}
+
+#mainWrapper {
+	position: absolute !important;
+	top: 0px !important;
+	left: 0px !important;
+	right: 0px !important;
+	margin: auto !important;
+	width: 1000px;
+	height: 625px;
+	background: url(../images/series/bg.jpg);
+	overflow: hidden;
+	/*
+	transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg); */
+}
+
+#menuLightbox {
+	position: absolute;
+	top: 45px;
+	left: 0px;
+	width: 1000px;
+	height: 580px;
+	background:rgba(0,0,0,0.5);
+	display: none;
+    z-index: 1001;
+}
+
+.button {
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	color:#fff;
+	background: #23a1ce;
+	text-align: center;
+	cursor: pointer;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+	font-family: Roboto-Medium;	
+}
+
+.tickMark {
+	position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 0px solid;
+    left: -52px;
+    top: -1px;
+	background-image: url(../images/icons/radio.png);
+	display: none;
+}
+
+.xMark {	
+    height: 20px;
+    width: 20px;
+    border: 0px solid;
+    float: left;    
+	background-image: url(../images/icons/cross.png);
+	display: none;
+}
+
+.radioBtn {    
+    float: left;
+	width: 16px;
+    height: 16px;
+	margin-right: 10px;
+    border-radius: 50px;
+    background-image: url(../images/icons/radio.png);
+	cursor: pointer;
+}
+
+.radioBtnSelected {	
+    background-image: url(../images/icons/radio-selected.png);
+}
+
+
+/* Page Header ******************************************************/
+#pageHeader {
+	position: absolute;
+	top: 0px !important;
+	left: 0px !important;
+	width: 1000px;
+	height: 55px;
+	background: white;
+	display: block;
+	z-index: 100;
+	margin-bottom: 10px;
+}
+
+#pageHeader .series {
+	font-family: RobotoSlab-Bold;
+	position: absolute;
+	float: left;
+	color: #D22027;
+	font-size: 19px;
+	line-height: 44px;
+	top: 5px;
+	left: 40px;	
+}
+
+#pageHeader .module-activity {
+	font-family: Roboto-Medium;
+	color: #000;	
+	font-size: 18px;	
+	position: absolute;
+	float: left;
+	top: 18px;
+	left: 290px;
+	margin-bottom: 10px;		
+}
+
+#headerLogo {
+	position: absolute;
+	float: right;
+	top:2px;
+	right: 40px;
+	width: 100px;
+	height: 45px;
+	background: url(../images/series/hlogo.png);
+	display: block;	
+}
+/*
+#gameContainer {
+	position:absolute;
+	width:1000px;
+	height:580px;
+	background:rgba(255,255,255,0.5);
+	top:45px !important;
+	left:0px !important;
+	display:none;
+	z-index: 2;
+	background: #fff;
+	background:url(../images/series/bg.jpg);
+}
+*/
+
+#activityEndScr, #feedbackCover, #activityDoneScr {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    display: none;
+    z-index: 1005;
+}
+#activityDoneScr {
+	position: absolute;
+	width: 1000px;
+	height: 580px;
+	top: 45px;
+	left: 0px;
+}
+#finalCover, #messageCover {
+    background: #fff none repeat scroll 0 0;
+    color: #272626;
+    display: block;
+    font-family: Roboto-Medium;
+    font-size: 19px;
+    height: auto;
+    line-height: 25px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: 230px;
+    text-align: center;
+    width: 960px;
+    z-index: 20;
+}
+
+#gameContainer, #graphicContainer, #activityEndScr, #assContainer, #feedbackCover {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    display: none;
+    height: 580px;
+    left: 0;
+    position: absolute;
+    top: 45px;
+    width: 1000px;
+    z-index: 1005;
+}
+
+
+#skipIntroCover {
+	display: none;
+    background: rgba(80, 65, 65, 0.6) none repeat scroll 0 0;
+    height: 580px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1000px;
+    z-index: 5;
+}
+
+#safetyScreenCover {
+	display: none;
+	background: rgba(80, 65, 65, 0.6) none repeat scroll 0 0;
+	/*height: 655px;*/
+	left: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 1000px;
+	z-index: 5;
+}
+
+#safetyScreen {
+	position: absolute;
+	width: 400px;
+	height: 336px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: white;
+	margin: auto;
+	font-family: Roboto-Regular;
+	font-size: 18px;
+	padding: 20px 20px 20px 20px;
+	box-shadow: 3px 3px 10px;
+	z-index: 99;
+	line-height: 1.2;
+}
+
+#safeStart {
+	position: relative;
+	/* margin: 498px 792px; */
+	background: url(../images/buttons/horizontal/continue.png);
+	background-size: 100% 100%;
+	display: none;
+	width: 150px;
+	height: 32px;
+	top: 0;
+	left: 122px;
+	cursor:default;
+}
+
+.tools{
+	height: 105px;
+    width: 150px;
+    margin: 30px 11px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.okBtn {
+	display: block;
+	position: relative;
+	top: 230px;
+	width: 200px;
+	height: 43px;
+	margin: 20px auto;
+	background: url(../images/buttons/horizontal/ok.png);
+	background-size: 100% 100%;
+	cursor: pointer;
+}

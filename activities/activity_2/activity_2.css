@@ -1,0 +1,138 @@
+.btu-quantity {
+    margin-top: 4em;
+}
+
+.btu-quantity img {
+    margin-left: 60px;
+    ;
+}
+
+.btu-hotspots {
+    position: absolute;
+    top: 0px;
+}
+
+.spots {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#correctSpot {
+    height: 28px;
+    left: 323px;
+    margin-top: 80px;
+    position: absolute;
+    top: 49px;
+    width: 408px;
+    z-index: 1;
+}
+
+#wrongSpot1 {
+    position: absolute;
+    height: 252px;
+    left: 80px;
+    margin-top: 80px;
+    width: 704px;
+    z-index: 0;
+}
+
+#wrongSpot2 {
+    height: 32px;
+    left: 17em;
+    margin-top: 295px;
+    position: absolute;
+    width: 0;
+    z-index: 1;
+}
+
+#wrongSpot3 {
+    height: 27px;
+    left: 188px;
+    margin-top: 285px;
+    position: absolute;
+    width: 72px;
+    z-index: 1;
+}
+
+#wrongSpot4 {
+    height: 151px;
+    left: 245.8px;
+    margin-top: 151px;
+    position: absolute;
+    width: 90px;
+    z-index: 1;
+}
+
+#wrongSpot5 {
+    height: 76px;
+    left: 717px;
+    margin-top: 70px;
+    position: absolute;
+    width: 50px;
+    z-index: 1;
+}
+
+.showHint {
+    display: none;
+    position: absolute;
+    width: 398px;
+    top: 123px;
+    left: 342px;
+    border: 3px solid yellow;
+    box-shadow: 0px 0px 27px #FFEB3B;
+    border-radius: 250px / 50px;
+    -moz-border-radius: 250px / 50px;
+    -webkit-border-radius: 250px / 50px;
+    height: 50px;
+    z-index: 1;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}

@@ -1,0 +1,296 @@
+
+
+.assessmentContent{
+    font-family: Roboto-Regular;
+    text-align: left;
+    display: table;
+    padding: 0px 20px;
+}
+.assessmentContent .row {
+    width: 100%;
+    text-align: left;
+    display:table-row;
+}
+.assessmentContent .question {
+    text-align: left;
+    display:table-cell;
+    padding-left: 25px;
+}
+.assessmentContent .question:first-child {
+    padding-left: 0;
+}
+.assessmentContent .question .heading{
+    display: table-row;
+    text-align: left;
+    vertical-align: top;
+}
+
+.assessmentContent .question .questionNo{
+    display: table-cell;
+    text-align: left;
+    width: 25px;
+}
+
+.assessmentContent .question .questionTitle{
+    display: table-cell;
+    text-align: left;
+    width: auto;
+}
+
+.assessmentContent .answers {
+    float:left;
+    width: 100%;
+    padding: 13px 0px 0px 0px;
+    box-sizing: border-box;
+}
+.assessmentContent .answers .option {
+    float:left;
+    width: 100%;
+    min-height: 18px;
+    margin-top: 10px;
+    padding-left: 70px;
+    box-sizing: border-box;
+}
+.assessmentContent .answers .option:first-child {
+    margin-bottom: 0;
+}
+
+.assessmentContent .answers input[type="radio"],
+.assessmentContent .answers input[type="checkbox"] {
+    display:none;
+}
+.assessmentContent .answers input[type="radio"]:not(old) + label {
+    display: inline-block;
+    margin-left: -25px;
+    padding-left: 25px;
+    min-height: 18px;
+    background: url(../assets/images/icons/radio.png) no-repeat 0 0;
+}
+
+.assessmentContent .answers input[type=radio]:not(old):checked + label {
+    background: url(../assets/images/icons/radio-selected.png) no-repeat 0 0;
+}
+
+.assessmentContent .answers input[type="checkbox"]:not(old) + label {
+    display: inline-block;
+    margin-left: -25px;
+    padding-left: 25px;
+    min-height: 18px;
+    background: url(../assets/images/icons/checkbox.png) no-repeat 0 0;
+}
+
+.assessmentContent .answers input[type=checkbox]:not(old):checked + label {
+    background: url(../assets/images/icons/checkbox_select.png) no-repeat 0 0;
+}
+
+
+.assessmentContent .answers .option.correct
+{
+    background: url('../assets/images/icons/tick.png') no-repeat 22px -3px;
+}
+.assessmentContent .answers .option.incorrect
+{
+    background: url('../assets/images/icons/cross.png') no-repeat 20px -3px;
+}
+
+/* Activity Assessment Window ***********************************************/
+#activityAssessmentWindow {
+    position: absolute;
+    font-family: Roboto-Bold;
+    width: 300px;
+    height: auto;
+    background:#FFF;
+    top: 80px;
+    left: 690px;
+    float: right;
+    z-index: 1000;
+    display: none;
+    -webkit-box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 16px -3px rgba(0,0,0,0.75);
+    padding-bottom: 25px;
+}
+
+#activityAssessmentWindow > #activityAssessmentHeader {
+    position: relative;
+    background: url(../assets/images/series/activity_bar.jpg) no-repeat 0 0 / 100% 100%;
+    width: 300px;
+    height: 25px;
+    cursor: move;
+}
+
+#activityAssessmentWindow > #activityAssessmentHeader > .minMaxIcon {
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#activityAssessmentWindow > #activityAssessmentHeader .minMaxIcon.minimized {
+    background: url(../assets/images/icons/down_icon.png) no-repeat 0% 0% / 100% 100%;;
+}
+#activityAssessmentWindow > #activityAssessmentHeader .minMaxIcon.maximized {
+    background: url(../assets/images/icons/up_icon.png) no-repeat 0% 0% / 100% 100%;;
+}
+
+#activityAssessmentWindow > #activityAssessmentContent {
+    position: relative;
+    width: 300px;
+    max-height: 390px;
+    padding: 20px;
+    padding-bottom: 0;
+    line-height: 16px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+#activityAssessmentWindow > #activityAssessmentHeaderContent {
+    position: relative;
+    width: 300px;
+}
+
+#activityAssessmentWindow.assessment .answers {
+    margin-bottom: 10px;
+}
+
+#activityAssessmentWindow.assessment .answers .option {
+    padding-left: 50px;
+}
+
+
+#activityAssessmentWindow > #activityAssessmentFooter {
+    float:left;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+#activityAssessmentWindow #submitBtn {
+    display: inline-block;
+    background: url(../assets/images/buttons/horizontal/submit.png);
+    background-size: 100% 100%;
+    cursor: pointer;
+    width: 150px;
+    height: 32px;
+}
+#activityAssessmentWindow .btn-continue {
+    display: none;
+    float:none;
+}
+
+#activityAssessmentWindow #submitBtn:hover {
+    background: url(../assets/images/buttons/horizontal/submit_over.png);
+    background-size: 100% 100%;
+}
+#activityAssessmentWindow.assessment .answers .option.correct
+{
+    background: url('../assets/images/icons/tick.png') no-repeat 2px -3px;
+}
+#activityAssessmentWindow.assessment .answers .option.incorrect
+{
+    background: url('../assets/images/icons/cross.png') no-repeat 0px -3px;
+}
+
+
+.revQsnSubmitBtn:active
+{
+    background: url('../assets/images/buttons/horizontal/submit_over.png') no-repeat;
+    background-size:100%;
+}
+.revQsnSubmitBtn
+{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: auto;
+    width: 150px;
+    height: 32px;
+    border-radius:10px;
+    text-align:center;
+    line-height:40px;
+    cursor:pointer;
+    background: url('../assets/images/buttons/horizontal/submit.png') no-repeat;
+    background-size:100%;
+    pointer-events:none;
+}
+
+.continueBtnToCongrats
+{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: initial;
+    margin: auto;
+    width: 150px;
+    height: 32px;
+    border-radius:10px;
+    text-align:center;
+    line-height:40px;
+    cursor:pointer;
+    background: url('../assets/images/buttons/horizontal/view_socrecard_small.png') no-repeat;
+    background-size:100%;
+}
+.continueBtnToCongrats:active
+{
+    background: url('../assets/images/buttons/horizontal/view_socrecard_over_small.png') no-repeat;
+    background-size:100%;
+}
+
+
+#reviewAssessment {
+    display: none;
+    position:absolute;
+    width:1000px;
+    height:590px;
+    background: url('../assets/images/activity/act_1/car.jpg') no-repeat rgba(255,255,255,0.5);
+    top:35px !important;
+    left:0px !important;
+    background-size: 100% 100%;
+    background-position-y: 20px;
+    display:none;
+    z-index: 2;
+}
+#reviewAssessment .container
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 908px;
+    height: 505px;
+    background: #fff;
+    border-top: 1px solid #000;
+    border-collapse:separate;
+}
+#reviewAssessment .container .title{
+    font-family: RobotoSlab-Bold;
+    float:left;
+    font-size: 34px;
+    color: #8E0007;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 25px;
+}
+
+#reviewAssessment .question .questionTitle{
+    line-height: 18px;
+}
+#reviewAssessment .row:first-child .question:last-child {
+    padding-bottom: 70px !important;
+}
+#reviewAssessment .assessmentContent .answers {
+    padding-top: 5px;
+}
+#reviewAssessment .nextFrame {
+    display:none
+}
+#reviewAssessment .btn-continue {
+    display: none;
+    float:none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}

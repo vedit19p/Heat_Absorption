@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Automotive Electricity &amp; Electronics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="assets/js/vendor/plug-ins/video-js/video-js.css" type="text/css">
+    <link rel="stylesheet" href="assets/js/vendor/plug-ins/video-js/lib/videojs-captions-toggle.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/vendor/jquery.mCustomScrollbar.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/vendor/reset.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/vendor/fonts.css" type="text/css">
+
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/home.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/video.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/sim.css" type="text/css">
+    <link rel="stylesheet" href="assessment/assessment.css" type="text/css">
+    <link rel="stylesheet" href="reports/report.css" type="text/css">
+
+
+    <script src="assets/js/vendor/head.min.js"></script>
+</head>
+
+<body>
+    <div id="mainWrapper">
+
+        <!-- START: Home Page ############################################################################################################################## -->
+        <div id="homePage">
+            <div id="homeLogo"></div>
+            <div id="homeContainer">
+                <div id="mainHeading"></div>
+                <div id="subHeading"></div>
+                <div id="homeButtons"></div>
+            </div>
+        </div>
+        <!-- END: Home Page -->
+
+        <!-- START: Page Header ############################################################################################################################ -->
+        <div id="pageHeader" style="display:none">
+            <!-- TODO: Replace with dynamic code populated from json data -->
+            <div class="series"></div>
+            <div class="module-activity"></div>
+            <div id="headerLogo"></div>
+        </div>
+        <!-- END: Page Header -->
+
+        <!-- START: Video Page ############################################################################################################################# -->
+        <div id="videoPage" style="display:none;">
+            <div id="videoContainer">
+                <div id="videoplayer">
+                    <iframe id="videoFrame" src="" scrolling="no" frameBorder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>Browser not compatible.</iframe>
+                </div>
+                <div id="videoButtons"></div>
+            </div>
+        </div>
+        <!-- END: Video Page -->
+
+        <!-- START: Simulation Page ######################################################################################################################## -->
+        <div id="simulationPage" style="display:none">
+
+            <!-- Audio Players -->
+            <audio id="audPlayer"></audio>
+            <audio id="audPlayer1"></audio>
+            <audio id="fbAudioPlayer"></audio>
+
+            <!-- Icon Bar -->
+            <div id="iconBar">
+                <div id="icons">
+                    <!-- Menu List -->
+                    <ul id="menu">
+                        <li id="tasks" class="txt">
+                            <span class="noarrow"></span><span class="litext">Tasks</span>
+                        </li>
+                        <li id="videos" class="txt">
+                            <span class="rarrow"></span><span class="litext1">Videos</span>
+                            <ul class="submenuVideos"></ul>
+                        </li>
+                        <li id="activities" class="txt">
+                            <span class="rarrow"></span><span class="litext1">Activities</span>
+                            <ul class="submenuActivites"></ul>
+                        </li>
+                        <!-- <li id="version" class="txt">Version: Beta</li> -->
+                    </ul>
+
+                    <!-- Service Information Menu List -->
+                    <ul id="siMenu"></ul>
+                </div>
+            </div>
+
+            <!-- Acticity Interactive Content -->
+            <div id="simulationContainer">
+                <!-- Load activity HTML file here -->
+                <div id="wholeContainer">
+                    <div id="contentContainer">
+                        <div id="zoomWrapper">
+                            <div id="panWrapper">
+                                <div id="contentInnerContainer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dragContainment"></div>
+            </div>
+
+
+            <!-- Skip Intro Screen -->
+            <div id="skipIntroCover" style="display:none">
+                <div id="skipBtn" title="Skip Intro"></div>
+            </div>
+
+            <!-- Activity End Screen -->
+            <div id="activityEndScr" style="display: none;">
+                <div id="finalCover"></div>
+                <div id="btncon" title="Continue"></div>
+                <div id="btnReviewQuestions" title="Go to Review Questions"></div>
+            </div>
+
+
+            <!-- Simulation Page Footer -->
+            <div id="footer" style="display:none;">
+                <div id="ccContent">
+                    <div id="cctxt"></div>
+                </div>
+                <div id="scoreArea">
+                    <div>SCORE : <span id="scoreval">0</span></div>
+                </div>
+            </div>
+
+            <!-- Popup Video Player -->
+            <div id="popupVideoPlayer">
+                <img id="videoClose" src="assets/images/icons/close_task.png" title="Close" />
+                <div id="videoPlayer">
+                    <iframe id="videoFrame" src="" scrolling="no" frameBorder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>Browser not compatible.</iframe>
+                </div>
+            </div>
+
+            <!-- Floating & Draggable Window -->
+            <div id="floatWindow">
+                <div id="floatHeader">
+                    <img id="closeFloatWindow" src="assets/images/icons/close_task.png" title="Close" />
+                    <p class="activityTitle"></p>
+                </div>
+                <div id="floatContent" class="mCustomScrollbar">
+                    <span class="taskListDescription"></span>
+                    <br><br>
+                    <ol class="taskList">
+                        <!-- These elements are dynamically generated, code is located in global.js (Get Activity Taskst) -->
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Activity Assessment Floating, Draggable & Minimizeable Window -->
+            <div id="activityAssessmentWindow" class="assessment">
+                <div id="activityAssessmentHeader">
+                    <span class="minMaxIcon maximized" title="Minimize"></span>
+                </div>
+                <div id="activityAssessmentContent" class="assessmentContent"></div>
+                <div id="activityAssessmentFooter">
+                    <div id="submitBtn" class="submit"></div>
+                    <div class="btn-continue"></div>
+                </div>
+            </div>
+
+            <!-- Continue Button -->
+            <div id="btnContinue" title="Continue"></div>
+
+            <!-- Activity Message Overlay -->
+            <div id="activityMessageOverlay">
+                <div id="activityMessage"></div>
+                <div class="btn-continue"></div>
+            </div>
+
+            <!-- Menu LightBox -->
+            <div id="menuLightbox"></div>
+
+            <!-- Alert Box -->
+            <div id="alertBox">
+                <div id="alertContent"></div>
+                <div id="buttonBar">
+                    <div id="btnYes"><img src="assets/images/buttons/horizontal/yes.png" class="alertbox-button"></div>
+                    <div id="btnNo"><img src="assets/images/buttons/horizontal/no.png" class="alertbox-button"></div>
+                </div>
+            </div>
+            
+            <!-- Activity Done Alert Box -->
+            <div id="activityDoneScr">
+            	<div id="messageCover"><span>You have completed this activity and your score has been recorded.</span></div>
+                <div id="contBtn" class="okBtn" title="OK"></div>
+            </div>
+
+            <!-- Tool Tray -->
+            <div id="toolTray" class="tray-closed">
+                <div id="toolTrayHeader">
+                    <div id="scrollUp"></div>
+                    <div id="closeTray"></div>
+                </div>
+                <div id="toolTrayContent">
+                    <div id="contentInner">
+                        <div class="tools"></div>
+                        <div class="tools"></div>
+                        <div class="tools"></div>
+                        <div class="tools"></div>
+                        <div class="tools"></div>
+                        <div class="tools"></div>
+                        <div class="tools"></div>
+                    </div>
+                </div>
+                <div id="toolTrayFooter">
+                    <div id="scrollDown"></div>
+                </div>
+            </div>
+        </div>
+        <!-- END: Simulation Page -->
+
+        <!-- START: Review Assessment Page -->
+        <div id="reviewAssessment" class="assessment">
+            <div class="container">
+                <div class="title">Review Questions</div>
+                <div id="reviewAssessmentContent" class="assessmentContent"></div>
+                <div class="btn-continue" title="Continue" style="pointer-events: none; display:none;"></div>
+                <div id="submit" class="revQsnSubmitBtn submit" title="Submit" style="pointer-events: none;"></div>
+                <div id="viewReport" class="continueBtnToCongrats nextFrame" title="View Report"></div>
+            </div>
+        </div>
+        <!-- END: Review Assessment Page -->
+
+
+        <div id="gameContainer">
+            <div id="mainContainer">
+                <div id="congratulationsView"></div>
+                <div id="processReport">
+                    <div id="table" class="fullHeight"></div>
+                    <div id="processReportButtons">
+                        <div id="printButton" title="Download"></div>
+                        <div id="closeButton" title="Close"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pdfViewer" style="display:none">
+        <div class="container">
+            <div class="header">
+                <!-- TODO: Replace with dynamic code populated from json data -->
+                <div class="series"></div>
+                <div class="module-activity"></div>
+                <div class="headerLogo"></div>
+                <div class="userName">Name:</div>
+            </div>
+            <div id="pdfData"></div>
+        </div>
+    </div>
+    <!-- GLOBAL UI SHELL SCRIPTS ########################################################################################################################### -->
+    <script>
+        // HeadJS is a JavaScript Module Laoder
+        // Visit http://headjs.com for complete details
+        head.load(
+            "assets/js/vendor/jquery/jquery-1.12.2.min.js",
+            "assets/js/vendor/jquery/jquery-ui.min.js",
+            "assets/js/vendor/jquery/jquery.ui.touch-punch.min.js",
+            "assets/js/vendor/jquery/jquery.tmpl.min.js",
+            "assets/js/vendor/jquery/jquery.mCustomScrollbar.concat.min.js",
+            "assets/js/vendor/plug-ins/video-js/video.js",
+            "assets/js/vendor/plug-ins/video-js/lib/videojs-captions-toggle.js",
+            "assets/js/vendor/dragscroll.js",
+            "assets/js/vendor/Draggable.min.js",
+            "assets/js/vendor/TweenMax.min.js",
+            "assets/js/vendor/jquery.gsap.min.js",
+
+            "assets/js/module-data.js",
+            "assets/js/config.js",
+            "assets/js/global.js",
+            "assets/js/video-page.js",
+            "assets/js/home-page.js",
+            "assets/js/service-information.js",
+            "assets/js/audio.js",
+            "assessment/assessment.js",
+            "reports/report.js",
+            "assets/js/app.js"
+        );
+    </script>
+
+    <script id="reviewAssessmentTmpl" type="text/x-jquery-tmpl">
+        {{each(i, q) assessment }} {{if i % 2 == 0 }}
+        <div class="row">
+            {{/if}}
+            <div id="question_${id}" class="question">
+                <div class="heading">
+                    <div class="questionNo">${id}.</div>
+                    <div class="questionTitle">{{html question}}</div>
+                </div>
+                <div class="answers">
+                    ${question.id} {{each(i, answer) answers }}
+                    <div id="answer_${id}" class="option">
+                        {{if type == 'radio' }}
+                        <input id="question_${q.id}_radioBtn_${id}" type="radio" name="question_${q.id}" value="${id}"> {{else}}
+                        <input id="question_${q.id}_radioBtn_${id}" type="checkbox" name="question_${q.id}" value="${id}"> {{/if}}
+                        <label for="question_${q.id}_radioBtn_${id}">
+                                ${answer}</label>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{if i % 2 == 1 }}
+        </div>
+        {{/if}} {{/each}}
+    </script>
+
+    <script id="assessmentTmpl" type="text/x-jquery-tmpl">
+        {{each(i, q) assessment }}
+        <div class="row">
+            <div id="question_${id}" class="question">
+                <div class="heading">
+                    <div class="questionTitle">{{html question}}</div>
+                </div>
+                <div class="answers">
+                    ${question.id} {{each(i, answer) answers }} {{if answer !== '' }}
+                    <div id="answer_${id}" class="option">
+                        {{if type == 'radio' }}
+                        <input id="question_${q.id}_radioBtn_${id}" type="radio" name="question_${q.id}" value="${id}"> {{else}}
+                        <input id="question_${q.id}_radioBtn_${id}" type="checkbox" name="question_${q.id}" value="${id}"> {{/if}}
+                        <label for="question_${q.id}_radioBtn_${id}">
+                                    ${answer}</label>
+                    </div>
+                    {{/if}} {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script id="congratulationsTmpl" type="text/x-jquery-tmpl">
+        <div id="congbox">
+            {{if pass == true }}
+            <p><span id="congrats">Congratulations!</span></p>
+            <p class="failmsg">
+                <span id="failmsg">You have successfully completed<br />the simulation on Heat Absorption Principles</span><br></p>
+            {{/if}} {{if pass != true }}
+            <p><span id="congrats"></span></p>
+            <p class="failmsg">
+                <span id="failmsg">Sorry, you have not successfully completed<br />the simulation on Heat Absorption Principles</span><br></p>
+            {{/if}}
+            <p class="scoremsg">Here is your score : ${totalScorePercent}%</p>
+            <p class="timemsg">Time Elapsed : ${totalTimeTaken}</p>
+            <div id="downloadBtn" title="View Performance Report"></div>
+            <div id="closeBtn" title="Close"></div>
+        </div>
+    </script>
+    
+    <script id="progressReportTmpl" type="text/x-jquery-tmpl">
+		<div id="displayFormat">
+			<div id="mainTitle">Performance Report:</div>
+			<div id="subTitle">
+				<div id="totalAct">Total Activities<br/> <span>${totalActivities}</span></div>
+				<div id="totalScore">Total Score <br/> <span>${totalScore}/${totalPossibleScore}</span></div>
+				<div id="totalPerScore">Percentage <br/> <span>${totalScorePercent}%</span></div>
+				<div id="totalTime">Time Elapsed: <br/> <span>${totalTimeTaken}</span></div>
+			</div>
+			<div id="headerCover">
+				<div id="actNo"><p>Activity Number</p></div>
+				<div id="actTitle"><p>${moduleTitle}</p></div>
+				<div id="actTotScore"><p>Total Activity Score</p></div>
+				<div id="actScore"><p>Steps</p></div>
+				<div id="attempts"><p>Attempts</p></div>
+				<div id="points"><p>Your Score</p></div>
+			</div>
+			{{each(i, activity) activityData}}
+			{{if activity.totalScore != null}}
+			<div class="activityData">
+				<div class="row">
+					<div class="actNum"><p>${activity.id}</p></div>
+					<div class="actName"><p>${activity.title}</p></div>
+					<div class="actScore"><p>${activity.totalActivityScore}</p></div>
+				</div>
+				{{each(i, data) activity.scores}}
+				<div class="contentArea">
+					<div class="emptyArea"></div>
+					<div class="error">
+						<div class="errorData">
+							<div class="errMsg"><p>${data.reportLabel}</p></div>
+							<div class="errCount"><p>${data.attempts}</p></div>
+							<div class="stepPoint"><p>${score}</p></div>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+				<div id="contentAreaError" class="contentArea">
+					<div class="emptyArea"></div>
+					<div class="error">
+						<div class="errorData scoreCover">
+							<div class="stepScore"><p>Your Score:<p></div>
+							<div class="emptyCount"></div>
+							<div id="stepTotal1" class="stepTotalPoint"><p>${activity.totalScore}</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/if}}
+			{{/each}}
+			<div id="reviewArea">
+				<span>Review Questions:</span> ${assessmentData.totalScore} out of ${assessmentData.totalPossiblePoints}<span></span>
+			</div>
+		</div>
+		<div id="pdfFormat">
+			<div id="mainTitle">Performance Report</div>
+			<table id="subTitle">
+				<tr>
+					<td id="totalAct">Total Activities <br/> ${totalActivities}</div>
+					<td id="totalScore">Total Score <br/> ${totalScore}/${totalPossibleScore}</div>
+					<td id="totalPerScore">Percentage <br/> ${totalScorePercent}%</div>
+					<td id="totalTime">Time Elasped: <br/> ${totalTimeTaken}</div>
+				</tr>
+			</table>
+			
+			{{each(i, activity) activityData}}
+			{{if activity.totalScore != null}}
+			<div class="activityData">
+				<div class="row">
+					<div class="actName heading">
+						<p>${activity.title}</p>
+					</div>
+					<div class="actScore heading">
+						<p>Total Activity Score: ${activity.totalActivityScore}</p>
+					</div>
+				</div>
+				<table>
+					<tr>
+						<td class="taskLabel heading">Question</td>
+						<td class="taskAttempts heading">Attempts</td>
+						<td class="taskScore heading">Your Score</td>
+					</tr>
+					{{each(i, data) activity.scores}}
+					<tr>
+						<td class="taskLabel">${data.reportLabel}</td>
+						<td class="taskAttempts">${data.attempts}</td>
+						<td class="taskScore">${score}</td>
+					</tr>
+					{{/each}}
+				</table>
+				<div class="yourScore">
+					<p>Your Score: ${activity.totalScore}</p>
+				</div>
+			</div>
+			{{/if}}
+			{{/each}}
+			
+			<div id="reviewArea">
+				<span>Review Questions:</span> ${assessmentData.totalScore} out of ${assessmentData.totalPossiblePoints}<span></span>
+			</div>
+		</div>
+	</script>
+
+</body>
+
+</html>
